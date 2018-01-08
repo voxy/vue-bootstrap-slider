@@ -59,6 +59,21 @@ export default {
         })
       }
     })
+
+    const styleProps = ['slider_track_class', 'slider_selection_class']
+    const styleClasses = {
+        slider_track_class: '.slider-track',
+        slider_selection_class: '.slider-selection'
+    }
+
+     styleProps.forEach(styleProp => {
+        if (props[styleProp]) {
+            const selector = styleClasses[styleProp];
+            console.log(styleProp, ':', props[styleProp])
+            console.log(this.slider.getElementsByClassName(selector))
+            debugger
+        }
+    })
   },
 
   beforeDestroy () {
